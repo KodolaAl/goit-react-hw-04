@@ -6,12 +6,11 @@ const SearchBar = ({ onSubmit }) => {
 e.preventDefault();
 const form = e.target;
 const topic = form.elements.query.value.trim();
-console.log(topic);
 if (topic === "") {
   toast("Please enter a search query.");
     return;}
 onSubmit(topic); 
-// form.reset();
+form.reset();
  }
   return (
     <header className={css.header}>
